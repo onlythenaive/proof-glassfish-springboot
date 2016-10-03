@@ -32,5 +32,6 @@ war {
 
 dependencies {
 
-    compile     group: 'org.springframework.boot',  name:  'spring-boot-starter-web'
+    compile             group: 'org.springframework.boot',      name: 'spring-boot-starter-web'
+    providedRuntime     group: 'org.springframework.boot',      name: 'spring-boot-starter-tomcat'
 }
