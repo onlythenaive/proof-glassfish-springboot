@@ -1,0 +1,36 @@
+buildscript {
+
+    repositories {
+
+        jcenter()
+    }
+
+    dependencies {
+
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+repositories {
+
+    jcenter()
+}
+
+bootRun {
+
+    systemProperties = System.properties
+}
+
+war {
+
+    archiveName 'glassfishspring.war'
+}
+
+dependencies {
+
+    compile     group: 'org.springframework.boot',  name:  'spring-boot-starter-web'
+}
